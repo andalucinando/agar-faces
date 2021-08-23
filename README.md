@@ -1,4 +1,4 @@
-Concept ideas; 
+# Concept ideas; 
 
 I want to create a variation of the agar.io game adapted for american politics. The game basically consists on selecting what party do you support, it can either be republicans or democrats. Further on the game will assing you the main representative of that political party, your mission (if you accept it) is to try and get bigger by "eating" other members of your political party. But there is a challenge! The names and the political party of every member will be private! So you will need to guess who is who into the american politics scene!
 
@@ -7,23 +7,22 @@ If you eat memebers of other political partys you will reduce your size inmediat
 Are you ready? 
 
 
-insert gif HERE!!!
-
+![](<iframe src="https://giphy.com/embed/Kwi0Iu9MxxOgg" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/taking-proves-gawker-Kwi0Iu9MxxOgg">via GIPHY</a></p>)
 
 Im also thinking on creating a last minute concept idea that will dratically change the concept of the game ex; instead of posticians i do it with birds. 
 
 
-Ideas for the name; 
+## Ideas for the name; 
 
 -> "Know your politicians"
 -> "Agar.gov"
 
 
 
-Update on the day to day; 
+## Update on the day to day; 
 
 
-Monday; 
+### Monday; 
 
 Its allready 12:00, my updates for now are the following; 
 
