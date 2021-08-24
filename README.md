@@ -36,3 +36,7 @@ Ending of Monday Outcome; I couldt figure out what has been the problem on the b
 with a black blob, from there i will try to figure out what can be the the way to stablish a dinamic background. 
 
 
+### Tuesday; 
+
+
+

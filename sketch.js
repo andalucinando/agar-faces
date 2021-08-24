@@ -1,50 +1,57 @@
-var blob; 
-var landscape; 
-var blobs = []; 
+var blob;
 
+var blobs = [];
+var zoom = 1;
 
+function setup() {
 
-function setup () {
+  // creating the canvas
 
-  createCanvas(1000, 1000); 
+  createCanvas(1500, 800);
 
+  // creating the main blob
 
   blob = new Blob(0, 0, 64);
-  for (var i = 0; i < 200; i++) {
-    var x = random(-width, width);
-    var y = random(-height, height);
-    blobs[i] = new Blob(x, y, 16);
+
+
+  // creating the mini-blobs and displaying how many do we want
+
+  for (var i = 0; i < 100; i++) {
+
+  // incrememnted the space where the blobs where to make it a much open world
+    var x = random(-width, width*7);
+    var y = random(-height, height*7);
+
+    // displaying the size of the blob
+
+    blobs[i] = new Blob(x, y, 50);
   }
 }
 
 function draw() {
 
+  // the background of the canvas
 
-  // how to set that the blob moves through the landscape
-  translate(width/2 - blob.pos.x, height/2 - blob.pos.y); 
+  background('red');
 
-  // set the background of the image 
-
-  imageMode(CENTER); 
-  image(landscape, width/2, height/2, width, height)
-  blob.show(); 
-  blob.update(); 
+    // shif the origin, shif the view
 
 
+  translate(width / 2, height / 2);
+  var newzoom = 64 / blob.r;
+  zoom = lerp(zoom, newzoom, 0.1);
+  scale(zoom);
+  translate(-blob.pos.x, -blob.pos.y);
 
-  // setting the blobs
-
-  for (var i=0; i < blobs.length; i++){
-    blobs[i].show(); 
-
+  for (var i = blobs.length - 1; i >= 0; i--) {
+    blobs[i].show();
+    if (blob.eats(blobs[i])) {
+      blobs.splice(i, 1);
+    }
   }
-}
 
-// close draw
+  blob.show();
 
-
-function preload(){
-//load the background image
-landscape = loadImage('./Images/photo-1628498188873-579210ce622e.jpg')
-
+  // calling the update function
+  blob.update();
 }
