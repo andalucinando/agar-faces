@@ -32,6 +32,9 @@ function Blob(x, y, r) {
         // circumference of a circle to its diameter
 
         var sum = PI * this.r * this.r + PI * other.r * other.r;
+        dingdong.play(); 
+        
+
 
         // devide it by the square root
 
@@ -41,6 +44,9 @@ function Blob(x, y, r) {
       } else {
         return false;
       }
+
+
+
     };
   
     this.show = function() {

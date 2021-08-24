@@ -7,7 +7,8 @@ If you eat memebers of other political partys you will reduce your size inmediat
 Are you ready? 
 
 
-![](<iframe src="https://giphy.com/embed/Kwi0Iu9MxxOgg" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/taking-proves-gawker-Kwi0Iu9MxxOgg">via GIPHY</a></p>)
+![]
+(https://media.giphy.com/media/Kwi0Iu9MxxOgg/giphy.gif)
 
 Im also thinking on creating a last minute concept idea that will dratically change the concept of the game ex; instead of posticians i do it with birds. 
 
@@ -32,11 +33,21 @@ Its allready 12:00, my updates for now are the following;
 - I got how it worked and then completely fuckt up the code and cant really see the blob or the background
 
 
-Ending of Monday Outcome; I couldt figure out what has been the problem on the background not showing, for tomorrow i will change the default setup so that i can have a clean black background
+**Ending of Monday Outcome**; I couldt figure out what has been the problem on the background not showing, for tomorrow i will change the default setup so that i can have a clean black background
 with a black blob, from there i will try to figure out what can be the the way to stablish a dinamic background. 
 
 
 ### Tuesday; 
+
+So for today the outcomes were the following; 
+
+- Got the Agar to start running over a red canvas and Move freely on an infite open space
+- redistributed the mini-blobs so it could be more challenging to find and eat them
+
+
+*challenges im facing at the moment*
+
+- cant really change the background so its dynamic
 
 
 

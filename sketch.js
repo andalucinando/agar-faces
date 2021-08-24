@@ -2,12 +2,28 @@ var blob;
 
 var blobs = [];
 var zoom = 1;
+let dingdong; 
+
+function preload (){
+
+}
+
+
 
 function setup() {
+
+  dingdong = loadSound('./mixkit-chewing-something-crunchy-2244.mp3')
+
 
   // creating the canvas
 
   createCanvas(1500, 800);
+
+
+
+  // for the sounds
+
+  
 
   // creating the main blob
 
@@ -26,6 +42,7 @@ function setup() {
 
     blobs[i] = new Blob(x, y, 50);
   }
+
 }
 
 function draw() {
@@ -54,4 +71,20 @@ function draw() {
 
   // calling the update function
   blob.update();
+}
+
+
+
+
+
+
+
+function togglePlaying() {
+  if (!song.isPlaying()) {
+    song.play();
+    button.html('pause music');
+  } else {
+    song.pause();
+    button.html('play music');
+  }
 }
