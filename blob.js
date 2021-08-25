@@ -5,7 +5,10 @@ function Blob(x, y, r) {
     this.pos = createVector(x, y);
     this.r = r;
     this.vel = createVector(0, 0);
-    this.speed = 6; 
+    this.speed = 20; 
+    this.blob = blob; 
+    this.smallBlob = this.smallBlob; 
+
   
 // create a vector (arrow that points from the mouse to the blob and set the 
 // direction of the blob, and moves the background in return )
@@ -16,7 +19,7 @@ function Blob(x, y, r) {
 
       var newvel = createVector(mouseX - width / 2, mouseY - height / 2);
       newvel.setMag(this.speed);
-      this.vel.lerp(newvel, 0.2);
+      this.vel.lerp(newvel, 0.05);
       this.pos.add(this.vel);
     };
 
@@ -51,9 +54,19 @@ function Blob(x, y, r) {
     this.show = function() {
 
     //
-      fill('green')
-      ellipse(this.pos.x, this.pos.y, this.r * 2, this.r * 2);
+    
+      //fill('red') 
+
+      //ellipse(this.pos.x, this.pos.y, this.r * 2, this.r * 2);
+      if (this.type === "spaceship") {
+        image(this.image, this.pos.x, this.pos.y, this.r*2, this.r*2)
+      }
+      if (this.type === "smallerblob") {
+        image(this.image, this.pos.x, this.pos.y, this.r*2, this.r*2)
+
+      }
     };
+
   }
 
   
