@@ -49,5 +49,15 @@ So for today the outcomes were the following;
 
 - cant really change the background so its dynamic
 
+### Wednesday; 
+
+Objectives for today; 
+
+Trying to define a trigger that sets the game and a short introduction of what are the rules od the game; It will be displayed on the lower part of the canvas where users will be able to see it and press any key to start the game; 
+
+
+My second challenge is trying to look how to change the background of the game and the different blovs to try and make it funnier and introduce a different context to it, still trying to figure out what can be the best idea for the game, but thats not really important untill the mechanics are ready. 
+
+
 
 

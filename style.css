@@ -18,9 +18,24 @@ backgroyu
 }
 
 h1{
-  font-family: 'Trebuchet MS';
+  font-family:Verdana;
+  font-weight: bolder;
   color: goldenrod;
-  justify-content: center;
-  margin: 50px;
-  padding: auto;
+  text-align: center;
+  margin: 30px;
+}
+
+.introduction {
+  text-align: left;
+  display: block;
+  background-color: yellow;
+ margin-left: 60px;
+ margin-right: 1500px;
+ padding: 10px;
+
+
+}
+
+text {
+  color:yellow;
 }
