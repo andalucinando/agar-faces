@@ -77,14 +77,14 @@ I want to create an agar.io of space combat. the game basically consists on crea
 - Bigguest technical challenge, How did i solve it? 
 
 
-        --> Getting the spaceship and the mini asteroids to change the background, the logic of the game was too complicated, but we could finally get it. 
+     --> Getting the spaceship and the mini asteroids to change the background, the logic of the game was too complicated, but we could finally get it. 
 
-        --> One challenge that i still didnt figure out how to do was the speed of the spaceship, how could i maintain the original speed of the spaceship for everytime it ate the blobs. 
+    --> One challenge that i still didnt figure out how to do was the speed of the spaceship, how could i maintain the original speed of the spaceship for everytime it ate the blobs. 
 
 
 - Biggest Mistake, what is my bigguest learning? 
 
-        --> My biggiest mistake was realizing that i could not make the politicians and load all the photos from the database into the game, i believe that on my next game i will be able to take this learning to a next level and make cooler ideas. 
+    --> My biggiest mistake was realizing that i could not make the politicians and load all the photos from the database into the game, i believe that on my next game i will be able to take this learning to a next level and make cooler ideas. 
 
 - Demo of the Game; Link of the Github page allready deployed! 
 

@@ -18,10 +18,11 @@ let shooter;
 function preload () {
 
   backgroundImage = loadImage("Images/photo-1628498188873-579210ce622e.jpg")
-  spaceship = loadImage("/spiked ship 3. small.blue_.PNG")
+  spaceship = loadImage("Images/spiked ship3.small.blue_.PNG")
   smallImage = loadImage("Images/Asteroid Brown.png")
   intro = loadImage("Images/stars wars shit.gif")
-  shooter = loadImage("/Images/SHOOTERstart.gif")
+  shooter = loadImage("Images/SHOOTERstart.gif")
+
   
 
 }
@@ -77,11 +78,11 @@ function draw() {
 
 
 clear(); 
+
 if (mode===0){
 
   background(intro, 0, 0, windowWidth, windowHeight)
   
-
   //
   textSize(30)
   textStyle(BOLD)
@@ -150,17 +151,21 @@ if (mode===1){
   }
 
 
+
+
   for (var i = 0; i < drops.length; i++) {
     drops[i].show();
+    console.log(drops)
     drops[i].move();
   
-    for (var j = 0; j < blobs.length; j++) {
-      if (drops[i].eats(blobs[j])) {
-        blobs[j].evaporate();
-        drops[i].evaporate();
+    //for (var j = 0; j < blobs.length; j++) {
+      //if (drops[i].eats(blobs[j])) {
+       // blobs[j].evaporate();
+       
+       //drops[i].evaporate();
       }
-    }
-  }
+ 
+
   
   for (var i = drops.length - 1; i >= 0; i--) {
     if (drops[i].toDelete) {
@@ -189,6 +194,7 @@ blob.update();
 }
 
 function keyPressed(){
+
   if(keyCode === ENTER){
     mode=1; 
   }
