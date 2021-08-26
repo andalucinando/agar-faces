@@ -6,9 +6,12 @@ var blobBackground;
 var blobs = [];
 var smallImage; 
 var zoom = 1;
-let dingdong; 
 let backgroundImage;
 let counter = 0;  
+let intro; 
+var drops = [];
+let useless; 
+
 
 
 
@@ -22,6 +25,10 @@ function preload (){
   backgroundImage = loadImage("Images/photo-1628498188873-579210ce622e.jpg")
   spaceship = loadImage("/spiked ship 3. small.blue_.PNG")
   smallImage = loadImage("./Images/Asteroid Brown.png")
+  intro = loadImage("/Images/stars wars shit.gif")
+  useless = loadImage("/Images/useless gif.gif")
+  
+
 }
 
 
@@ -41,16 +48,14 @@ console.log(windowHeight, windowWidth)
 
 
 
-
-  // for the sounds
-
-  
-
   // creating the main blob
 
   blob = new Blob(0, 0, 100);
   blob.type = "spaceship"; 
   blob.image = spaceship; 
+
+  // drops 
+
   
 
 
@@ -59,8 +64,8 @@ console.log(windowHeight, windowWidth)
   for (var i = 0; i < 2000; i++) {
  
   // incrememnted the space where the blobs where to make it a much open world
-    var x = random(-width, width*50);
-    var y = random(-height, height*50);
+    var x = random(-width, width*80);
+    var y = random(-height, height*80);
 
     // displaying the size of the blob
 
@@ -74,10 +79,24 @@ console.log(windowHeight, windowWidth)
 
 function draw() {
 
+
+
 clear(); 
 if (mode===0){
-  text('Press enter to start', 20, 40);
+  background(intro, 0, 0, windowWidth, windowHeight)
+  //
+  text('MEGADEATH ULTRA SPACE COMBAT', 500, 500);
+  textSize(50)
+  textStyle(BOLD)
+
+  //
+  text('PRESS ENTER TO DIE', 500, 600);
+  textSize(50)
+  textStyle(BOLD)
+
 }
+
+
 if (mode===1){
 
 
@@ -86,7 +105,6 @@ if (mode===1){
   // the background of the canvas
 
   image(backgroundImage, 0, 0, windowWidth, windowHeight)
-  console.log(testImage)
 
 // text container settings MAIN INTRODUCTION TEXT
 
@@ -132,23 +150,71 @@ if (mode===1){
   }
 
 
+  for (var i = 0; i < drops.length; i++) {
+    drops[i].show();
+    drops[i].move();
+  
+    for (var j = 0; j < blobs.length; j++) {
+      if (drops[i].eats(blobs[j])) {
+        blobs[j].evaporate();
+        drops[i].evaporate();
+      }
+    }
+  }
+  
+  for (var i = drops.length - 1; i >= 0; i--) {
+    if (drops[i].toDelete) {
+      drops.splice(i, 1);
+    }
+  }
+  
 
 
 
-  blob.show();
+
+
+blob.show();
 
   // calling the update function
 
-  blob.update();
+blob.update();
+
 
 
 }
+
+
+
+  if(counter > 3) {
+
+    background('red')
+    text("Sorry bro, refresh the page!.",6000,6000)
+    image(useless, 0, 0, 5000, 5000)
+    textAlign(CENTER);
+    textSize(1000)
+    fill('white')
+
+  }
+
+
+
 }
 
 function keyPressed(){
   if(keyCode === ENTER){
     mode=1; 
   }
+
+  if (key === ' ') {
+    var drop = new Drop(blobs.x, height);
+    drops.push(drop);
+  }
+
+  if(keyCode === 82) {
+    mode=0;
+  
+ }
+
 }
 
 

@@ -13,13 +13,18 @@ function Blob(x, y, r) {
 // create a vector (arrow that points from the mouse to the blob and set the 
 // direction of the blob, and moves the background in return )
 
+    
+
+
+
+
     this.update = function() {
 
     // here we substract the center of the windows to not overlap
 
       var newvel = createVector(mouseX - width / 2, mouseY - height / 2);
       newvel.setMag(this.speed);
-      this.vel.lerp(newvel, 0.05);
+      this.vel.lerp(newvel, 0.9);
       this.pos.add(this.vel);
     };
 
