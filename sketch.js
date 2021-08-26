@@ -15,19 +15,13 @@ let shooter;
 
 
 
-
-
-
-
-
-
-function preload (){
+function preload () {
 
   backgroundImage = loadImage("Images/photo-1628498188873-579210ce622e.jpg")
-  spaceship = loadImage("spiked ship 3. small.blue_.PNG")
+  spaceship = loadImage("/spiked ship 3. small.blue_.PNG")
   smallImage = loadImage("Images/Asteroid Brown.png")
   intro = loadImage("Images/stars wars shit.gif")
-  shooter = loadImage("Images/SHOOTERstart.gif")
+  shooter = loadImage("/Images/SHOOTERstart.gif")
   
 
 }
@@ -84,19 +78,19 @@ function draw() {
 
 clear(); 
 if (mode===0){
+
   background(intro, 0, 0, windowWidth, windowHeight)
-  rect(30, 400, 700, 500, 50);
+  
 
   //
   textSize(30)
   textStyle(BOLD)
-  text('SPACE SHOOTERS: THE GAME', 100, 500,);
+  text('SPACE SHOOTERS: THE GAME', 1180, 700,);
+  text('PRESS ENTER', 1300, 750,);
 
 
   //
-  text('PRESS ENTER TO DIE', 100, 550);
-  textSize(50)
-  textStyle(ITALIC)
+ 
   
 
 
