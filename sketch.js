@@ -10,7 +10,8 @@ let backgroundImage;
 let counter = 0;  
 let intro; 
 var drops = [];
-let useless; 
+let shooter; 
+
 
 
 
@@ -23,10 +24,10 @@ let useless;
 function preload (){
 
   backgroundImage = loadImage("Images/photo-1628498188873-579210ce622e.jpg")
-  spaceship = loadImage("/spiked ship 3. small.blue_.PNG")
-  smallImage = loadImage("./Images/Asteroid Brown.png")
-  intro = loadImage("/Images/stars wars shit.gif")
-  useless = loadImage("/Images/useless gif.gif")
+  spaceship = loadImage("spiked ship 3. small.blue_.PNG")
+  smallImage = loadImage("Images/Asteroid Brown.png")
+  intro = loadImage("Images/stars wars shit.gif")
+  shooter = loadImage("Images/SHOOTERstart.gif")
   
 
 }
@@ -84,15 +85,20 @@ function draw() {
 clear(); 
 if (mode===0){
   background(intro, 0, 0, windowWidth, windowHeight)
-  //
-  text('MEGADEATH ULTRA SPACE COMBAT', 500, 500);
-  textSize(50)
-  textStyle(BOLD)
+  rect(30, 400, 700, 500, 50);
 
   //
-  text('PRESS ENTER TO DIE', 500, 600);
-  textSize(50)
+  textSize(30)
   textStyle(BOLD)
+  text('SPACE SHOOTERS: THE GAME', 100, 500,);
+
+
+  //
+  text('PRESS ENTER TO DIE', 100, 550);
+  textSize(50)
+  textStyle(ITALIC)
+  
+
 
 }
 
@@ -183,18 +189,6 @@ blob.update();
 
 }
 
-
-
-  if(counter > 3) {
-
-    background('red')
-    text("Sorry bro, refresh the page!.",6000,6000)
-    image(useless, 0, 0, 5000, 5000)
-    textAlign(CENTER);
-    textSize(1000)
-    fill('white')
-
-  }
 
 
 
