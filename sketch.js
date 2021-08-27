@@ -11,6 +11,7 @@ let counter = 0;
 let intro; 
 var drops = [];
 let shooter; 
+let song; 
 
 
 
@@ -22,6 +23,7 @@ function preload () {
   smallImage = loadImage("Images/Asteroid Brown.png")
   intro = loadImage("Images/stars wars shit.gif")
   shooter = loadImage("Images/SHOOTERstart.gif")
+  song = loadSound("sounds/berlin-school-ambient-01-thyphon-6582.mp3")
 
   
 
@@ -71,12 +73,15 @@ console.log(windowHeight, windowWidth)
     smallBlob.type = "smallerblob"; 
   }
 
+
+
 }
 
+
+
+
+
 function draw() {
-
-
-
 clear(); 
 
 if (mode===0){
@@ -109,7 +114,7 @@ if (mode===1){
 
 // text container settings MAIN INTRODUCTION TEXT
 
-    let s = 'WELCOME TO AGAR.IO FOR FACES';
+    let s = 'GET ALL THE ASTEROIDS!';
     fill('#ED225D');
     textStyle(BOLD)
     textSize(30)
@@ -176,6 +181,8 @@ function keyPressed(){
 
   if(keyCode === ENTER){
     mode=1; 
+    song.play(); 
+
   }
 
 

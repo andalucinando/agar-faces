@@ -86,7 +86,12 @@ I want to create an agar.io of space combat. the game basically consists on crea
 
     --> My biggiest mistake was realizing that i could not make the politicians and load all the photos from the database into the game, i believe that on my next game i will be able to take this learning to a next level and make cooler ideas. 
 
+    I also wasnt able to fix the sound! its something ill work on after and try to fix it!
+
 - Demo of the Game; Link of the Github page allready deployed! 
+
+### https://andalucinando.github.io/agar-faces/
+
 
 
 
